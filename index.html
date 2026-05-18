@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sanwariya Classes — Concept Clear • Result Sure</title>
+    <!-- Tailwind CSS for Premium UI Architecture -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brandSaffron: '#FF7A00',
+                        brandGold: '#ECC94B',
+                        brandCream: '#F7F4EF',
+                        darkCharcoal: '#0F0F11',
+                        darkCard: '#1A1A1E',
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'Noto Sans Gujarati', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts: Poppins & Noto Sans Gujarati -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Gujarati:wght@400;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- AOS (Animate on Scroll) Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        /* Custom Glowing & Smooth Effects */
+        .glow-saffron:hover {
+            box-shadow: 0 0 20px rgba(255, 122, 0, 0.4);
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #FF7A00 0%, #ECC94B 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .custom-shape-divider {
+            fill: #1A1A1E;
+        }
+    </style>
+</head>
+<body class="bg-darkCharcoal text-brandCream font-sans overflow-x-hidden">
+
+    <!-- 1. MODERN NAVBAR -->
+    <nav class="sticky top-0 z-50 bg-darkCharcoal/90 backdrop-blur-md border-b border-white/5 dynamic-nav transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Brand Identity -->
+                <div class="flex items-center space-x-3 group cursor-pointer">
+                    <div class="w-12 h-12 rounded-xl bg-gradient-to-tr from-brandSaffron to-brandGold flex items-center justify-center text-darkCharcoal text-xl font-bold shadow-lg shadow-brandSaffron/20 transition-transform group-hover:rotate-12">
+                        <i class="fa-solid fa-book-open-reader"></i>
+                    </div>
+                    <div>
+                        <span class="text-xl font-bold tracking-tight block text-white group-hover:text-brandSaffron transition-colors">સાંવરિયા Classes</span>
+                        <span class="text-xs text-brandGold tracking-wider block font-light -mt-1">Concept Clear • Result Sure</span>
+                    </div>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8 font-medium text-sm tracking-wide">
+                    <a href="#home" class="text-brandSaffron transition-colors">Home</a>
+                    <a href="#why-choose" class="text-gray-400 hover:text-white transition-colors">Why Us</a>
+                    <a href="#subjects" class="text-gray-400 hover:text-white transition-colors">Subjects</a>
+                    <a href="#results" class="text-gray-400 hover:text-white transition-colors">Results</a>
+                    <a href="#gallery" class="text-gray-400 hover:text-white transition-colors">Gallery</a>
+                    <a href="#contact" class="bg-gradient-to-r from-brandSaffron to-brandGold text-darkCharcoal px-5 py-2.5 rounded-lg font-bold shadow-md hover:opacity-90 transition-all glow-saffron">Enroll Now</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-400 hover:text-white focus:outline-none text-2xl">
+                        <i class="fa-solid fa-bars-staggered"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Dropout Navigation -->
+        <div id="mobile-menu" class="hidden md:hidden bg-darkCard border-b border-white/5 px-4 pt-2 pb-6 space-y-3 absolute w-full left-0 transition-all">
+            <a href="#home" class="block text-brandSaffron py-2 px-3 rounded-md bg-white/5 font-medium">Home</a>
+            <a href="#why-choose" class="block text-gray-300 hover:text-white py-2 px-3 rounded-md transition-colors">Why Us</a>
+            <a href="#subjects" class="block text-gray-300 hover:text-white py-2 px-3 rounded-md transition-colors">Subjects</a>
+            <a href="#results" class="block text-gray-300 hover:text-white py-2 px-3 rounded-md transition-colors">Results</a>
+            <a href="#gallery" class="block text-gray-300 hover:text-white py-2 px-3 rounded-md transition-colors">Gallery</a>
+            <a href="#contact" class="block bg-gradient-to-r from-brandSaffron to-brandGold text-darkCharcoal text-center font-bold py-3 rounded-md shadow-md">Enroll Now</a>
+        </div>
+    </nav>
+
+    <!-- 2. HERO SECTION -->
+    <header id="home" class="relative min-h-[calc(100vh-5rem)] flex items-center justify-center px-4 overflow-hidden pt-12 md:pt-0">
+        <!-- Modern Floating Animated Gradients -->
+        <div class="absolute w-[400px] h-[400px] bg-brandSaffron/10 rounded-full blur-[120px] top-10 -left-20 animate-pulse"></div>
+        <div class="absolute w-[300px] h-[300px] bg-brandGold/10 rounded-full blur-[100px] bottom-10 -right-20 animate-pulse" style="animation-delay: 2s;"></div>
+
+        <div class="max-w-5xl mx-auto text-center relative z-10" data-aos="fade-up" data-aos-duration="1000">
+            <!-- Desi + Premium Vibe Badge -->
+            <div class="inline-flex items-center space-x-2 bg-white/5 border border-white/10 px-4 py-2 rounded-full mb-6 backdrop-blur-sm">
+                <span class="flex h-2 w-2 relative">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brandGold opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-2 w-2 bg-brandGold"></span>
+                </span>
+                <span class="text-xs md:text-sm font-semibold tracking-wider text-brandGold uppercase">નવા સત્ર માટે એડમિશન ઓપન • Class 6 to 8</span>
+            </div>
+
+            <!-- Big Main Heading -->
+            <h1 class="text-4xl sm:text-6xl md:text-7xl font-bold tracking-tight leading-tight mb-6">
+                Welcome to <br>
+                <span class="gradient-text">Sanwariya Classes</span>
+            </h1>
+
+            <!-- Subheading -->
+            <p class="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto mb-10 font-light leading-relaxed">
+                Building clear concepts, strong discipline, and academic confidence for <span class="text-white font-medium">Maths, Science & English</span>. 
+                <span class="block mt-2 text-brandGold/90 font-normal text-base">ભણવાનું થશે હવે એકદમ સરળ અને સ્માર્ટ!</span>
+            </p>
+
+            <!-- Action Buttons -->
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="#subjects" class="w-full sm:w-auto bg-gradient-to-r from-brandSaffron to-brandGold text-darkCharcoal px-8 py-4 rounded-xl font-bold text-base shadow-lg shadow-brandSaffron/20 hover:scale-[1.02] transition-transform flex items-center justify-center space-x-2 glow-saffron">
+                    <span>Explore Courses</span>
+                    <i class="fa-solid fa-arrow-right text-xs"></i>
+                </a>
+                <a href="#results" class="w-full sm:w-auto bg-white/5 border border-white/10 hover:bg-white/10 text-white px-8 py-4 rounded-xl font-semibold text-base transition-all flex items-center justify-center space-x-2">
+                    <i class="fa-solid fa-trophy text-brandGold"></i>
+                    <span>View Toppers</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 3. WHY CHOOSE US (ABOUT HIGHLIGHTS) -->
+    <section id="why-choose" class="py-24 bg-darkCard relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+                
+                <!-- Left Content Box -->
+                <div class="lg:col-span-5" data-aos="fade-right">
+                    <span class="text-brandSaffron uppercase text-xs font-bold tracking-widest block mb-2">Our Core Focus</span>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6 text-white leading-tight">ભણતર એવું જે પરિણામ બદલી નાખે.</h2>
+                    <p class="text-gray-400 mb-8 leading-relaxed text-base font-light">
+                        Sanwariya Classes focuses intensely on deep concept clarity, self-discipline, inner confidence, and contemporary smart learning ecosystems. We believe every student holds unique potential that thrives under optimal, personalized guidance.
+                    </p>
+                    <div class="p-6 bg-darkCharcoal/60 rounded-2xl border border-white/5 flex items-center space-x-4">
+                        <div class="w-12 h-12 rounded-full bg-brandSaffron/10 flex items-center justify-center text-brandSaffron text-xl shrink-0">
+                            <i class="fa-solid fa-user-tie"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-white font-semibold">Amitbhai Suthar</h4>
+                            <p class="text-xs text-gray-500 uppercase tracking-wider">Founder & Head Mentor</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Grid Items -->
+                <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6" data-aos="fade-left">
+                    <!-- Feature Card 1 -->
+                    <div class="p-6 bg-darkCharcoal/40 rounded-2xl border border-white/5 hover:border-brandSaffron/20 transition-all group">
+                        <div class="w-12 h-12 rounded-xl bg-brandSaffron/10 flex items-center justify-center text-brandSaffron text-xl mb-4 group-hover:bg-brandSaffron group-hover:text-darkCharcoal transition-all">
+                            <i class="fa-solid fa-users-viewfinder"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-2">Small Batches</h3>
+                        <p class="text-gray-400 text-sm font-light leading-relaxed">Limited student intake per batch ensuring individual space, comfort, and direct tracking metrics.</p>
+                    </div>
+
+                    <!-- Feature Card 2 -->
+                    <div class="p-6 bg-darkCharcoal/40 rounded-2xl border border-white/5 hover:border-brandGold/20 transition-all group">
+                        <div class="w-12 h-12 rounded-xl bg-brandGold/10 flex items-center justify-center text-brandGold text-xl mb-4 group-hover:bg-brandGold group-hover:text-darkCharcoal transition-all">
+                            <i class="fa-solid fa-calendar-check"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-2">Weekly Evaluation</h3>
+                        <p class="text-gray-400 text-sm font-light leading-relaxed">Rigorous chapter-end tests patterned explicitly to enhance memory retention and erase exam fear.</p>
+                    </div>
+
+                    <!-- Feature Card 3 -->
+                    <div class="p-6 bg-darkCharcoal/40 rounded-2xl border border-white/5 hover:border-brandGold/20 transition-all group">
+                        <div class="w-12 h-12 rounded-xl bg-brandGold/10 flex items-center justify-center text-brandGold text-xl mb-4 group-hover:bg-brandGold group-hover:text-darkCharcoal transition-all">
+                            <i class="fa-solid fa-bullseye"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-2">Personal Attention</h3>
+                        <p class="text-gray-400 text-sm font-light leading-relaxed">Continuous performance reporting and customized focus charts based on student's pace.</p>
+                    </div>
+
+                    <!-- Feature Card 4 -->
+                    <div class="p-6 bg-darkCharcoal/40 rounded-2xl border border-white/5 hover:border-brandSaffron/20 transition-all group">
+                        <div class="w-12 h-12 rounded-xl bg-brandSaffron/10 flex items-center justify-center text-brandSaffron text-xl mb-4 group-hover:bg-brandSaffron group-hover:text-darkCharcoal transition-all">
+                            <i class="fa-solid fa-circle-question"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-2">Doubt Solving</h3>
+                        <p class="text-gray-400 text-sm font-light leading-relaxed">Dedicated interactive open slots daily where students clear concepts without hesitation.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. SUBJECTS & CLASSES SECTION -->
+    <section id="subjects" class="py-24 bg-darkCharcoal">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+                <span class="text-brandGold uppercase text-xs font-bold tracking-widest block mb-2">Curriculum Roadmap</span>
+                <h2 class="text-3xl md:text-5xl font-bold text-white mb-4">Classes & Core Subjects</h2>
+                <p class="text-gray-400 font-light">Comprehensive offline instruction mapped specifically for middle school foundations.</p>
+            </div>
+
+            <!-- Target Standard Tabs -->
+            <div class="flex justify-center space-x-4 mb-12" data-aos="fade-up">
+                <span class="px-6 py-2 bg-white/5 border border-white/10 rounded-full font-semibold text-brandGold text-sm">Class 6</span>
+                <span class="px-6 py-2 bg-white/5 border border-white/10 rounded-full font-semibold text-brandGold text-sm">Class 7</span>
+                <span class="px-6 py-2 bg-white/5 border border-white/10 rounded-full font-semibold text-brandGold text-sm">Class 8</span>
+            </div>
+
+            <!-- Subject Grid Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8" data-aos="zoom-in-up">
+                <!-- Subject 1: Maths -->
+                <div class="bg-darkCard rounded-3xl p-8 border border-white/5 hover:border-brandSaffron/30 transition-all relative overflow-hidden group">
+                    <div class="absolute -right-6 -bottom-6 text-white/[0.02] text-9xl font-bold group-hover:text-white/[0.04] transition-all">01</div>
+                    <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-brandSaffron to-orange-600 text-darkCharcoal font-bold text-2xl flex items-center justify-center mb-6 shadow-md">
+                        <i class="fa-solid fa-calculator"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-3">Maths (ગણિત)</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6 font-light">Eliminating fear of equations and numbers through structural shortcuts, visualization, and heavy step-by-step logic drills.</p>
+                    <ul class="space-y-2 text-sm text-gray-300 font-medium">
+                        <li><i class="fa-solid fa-check text-brandGold mr-2"></i>Formula Breakdown</li>
+                        <li><i class="fa-solid fa-check text-brandGold mr-2"></i>Daily Practice Sheets</li>
+                    </ul>
+                </div>
+
+                <!-- Subject 2: Science -->
+                <div class="bg-darkCard rounded-3xl p-8 border border-white/5 hover:border-brandSaffron/30 transition-all relative overflow-hidden group">
+                    <div class="absolute -right-6 -bottom-6 text-white/[0.02] text-9xl font-bold group-hover:text-white/[0.04] transition-all">02</div>
+                    <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-brandSaffron to-orange-600 text-darkCharcoal font-bold text-2xl flex items-center justify-center mb-6 shadow-md">
+                        <i class="fa-solid fa-flask-vial"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-3">Science (વિજ્ઞાન)</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6 font-light">Explaining natural laws, physics mechanisms, and live botanical concepts in plain, highly understandable colloquial terms.</p>
+                    <ul class="space-y-2 text-sm text-gray-300 font-medium">
+                        <li><i class="fa-solid fa-check text-brandGold mr-2"></i>Concept Demonstrations</li>
+                        <li><i class="fa-solid fa-check text-brandGold mr-2"></i>Diagram Mastery Work</li>
+                    </ul>
+                </div>
+
+                <!-- Subject 3: English -->
+                <div class="bg-darkCard rounded-3xl p-8 border border-white/5 hover:border-brandSaffron/30 transition-all relative overflow-hidden group">
+                    <div class="absolute -right-6 -bottom-6 text-white/[0.02] text-9xl font-bold group-hover:text-white/[0.04] transition-all">03</div>
+                    <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-brandSaffron to-orange-600 text-darkCharcoal font-bold text-2xl flex items-center justify-center mb-6 shadow-md">
+                        <i class="fa-solid fa-language"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-3">English (અંગ્રેજી)</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6 font-light">Accelerating descriptive language confidence, comprehensive translation syntax rules, and robust foundational grammar building.</p>
+                    <ul class="space-y-2 text-sm text-gray-300 font-medium">
+                        <li><i class="fa-solid fa-check text-brandGold mr-2"></i>Grammar Foundations</li>
+                        <li><i class="fa-solid fa-check text-brandGold mr-2"></i>Reading & Writing Drills</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. RESULTS HALL OF FAME -->
+    <section id="results" class="py-24 bg-darkCard relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+                <span class="text-brandSaffron uppercase text-xs font-bold tracking-widest block mb-2">Our Pride</span>
+                <h2 class="text-3xl md:text-5xl font-bold text-white mb-4">Hard Work + Right Guidance = Strong Results</h2>
+                <p class="text-gray-400 font-light">Witness the stellar transformation of our dedicated young achievers.</p>
+            </div>
+
+            <!-- Student Result Cards Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8" data-aos="fade-up" data-aos-delay="200">
+                <!-- Result 1 -->
+                <div class="bg-darkCharcoal rounded-2xl p-6 border-t-4 border-brandSaffron shadow-xl relative overflow-hidden">
+                    <div class="absolute top-4 right-4 text-brandSaffron/20 text-3xl"><i class="fa-solid fa-award"></i></div>
+                    <div class="flex items-center space-x-4 mb-4">
+                        <div class="w-14 h-14 rounded-full bg-gradient-to-tr from-brandSaffron to-brandGold p-0.5">
+                            <div class="w-full h-full bg-darkCard rounded-full flex items-center justify-center text-white text-xl font-bold">AP</div>
+                        </div>
+                        <div>
+                            <h4 class="text-white font-bold text-lg">Aarav Patel</h4>
+                            <p class="text-xs text-gray-500">Mathematics Topper</p>
+                        </div>
+                    </div>
+                    <div class="bg-white/5 py-3 px-4 rounded-xl flex items-center justify-between">
+                        <span class="text-sm text-gray-400">Final Score:</span>
+                        <span class="text-2xl font-bold text-brandSaffron">92% In Maths</span>
+                    </div>
+                </div>
+
+                <!-- Result 2 (Progress/Growth Case) -->
+                <div class="bg-darkCharcoal rounded-2xl p-6 border-t-4 border-brandGold shadow-xl relative overflow-hidden">
+                    <div class="absolute top-4 right-4 text-brandGold/20 text-3xl"><i class="fa-solid fa-chart-line"></i></div>
+                    <div class="flex items-center space-x-4 mb-4">
+                        <div class="w-14 h-14 rounded-full bg-gradient-to-tr from-brandSaffron to-brandGold p-0.5">
+                            <div class="w-full h-full bg-darkCard rounded-full flex items-center justify-center text-white text-xl font-bold">KS</div>
+                        </div>
+                        <div>
+                            <h4 class="text-white font-bold text-lg">Khushi Shah</h4>
+                            <p class="text-xs text-gray-500">Massive Performance Jump</p>
+                        </div>
+                    </div>
+                    <div class="bg-white/5 py-3 px-4 rounded-xl flex items-center justify-between">
+                        <span class="text-sm text-gray-400">Incredible Rise:</span>
+                        <span class="text-lg font-bold text-brandGold">55% <i class="fa-solid fa-arrow-right text-xs mx-1"></i> 82%</span>
+                    </div>
+                </div>
+
+                <!-- Result 3 -->
+                <div class="bg-darkCharcoal rounded-2xl p-6 border-t-4 border-brandSaffron shadow-xl relative overflow-hidden">
+                    <div class="absolute top-4 right-4 text-brandSaffron/20 text-3xl"><i class="fa-solid fa-flask"></i></div>
+                    <div class="flex items-center space-x-4 mb-4">
+                        <div class="w-14 h-14 rounded-full bg-gradient-to-tr from-brandSaffron to-brandGold p-0.5">
+                            <div class="w-full h-full bg-darkCard rounded-full flex items-center justify-center text-white text-xl font-bold">VC</div>
+                        </div>
+                        <div>
+                            <h4 class="text-white font-bold text-lg">Vishal Chamar</h4>
+                            <p class="text-xs text-gray-500">Science Stream Topper</p>
+                        </div>
+                    </div>
+                    <div class="bg-white/5 py-3 px-4 rounded-xl flex items-center justify-between">
+                        <span class="text-sm text-gray-400">Final Score:</span>
+                        <span class="text-2xl font-bold text-brandSaffron">Science Topper</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. TESTIMONIALS SECTION -->
+    <section class="py-24 bg-darkCharcoal">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold text-white">What Parents & Students Say</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8" data-aos="fade-up" data-aos-delay="200">
+                <!-- Testimonial 1 -->
+                <div class="bg-darkCard p-8 rounded-2xl border border-white/5 relative">
+                    <div class="text-brandSaffron text-4xl font-serif absolute top-4 left-6 opacity-20">“</div>
+                    <p class="text-gray-300 italic text-sm leading-relaxed mb-6 relative z-10">
+                        "Sir explains difficult maths concepts in very easy language. My son stopped fearing math homework completely."
+                    </p>
+                    <div class="text-xs font-semibold text-brandGold uppercase tracking-wide">— Parent Review</div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="bg-darkCard p-8 rounded-2xl border border-white/5 relative">
+                    <div class="text-brandSaffron text-4xl font-serif absolute top-4 left-6 opacity-20">“</div>
+                    <p class="text-gray-300 italic text-sm leading-relaxed mb-6 relative z-10">
+                        "Weekly tests helped improve my confidence a lot. The chapter breakdowns make exam revision extremely smooth."
+                    </p>
+                    <div class="text-xs font-semibold text-brandGold uppercase tracking-wide">— Class 8 Student</div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="bg-darkCard p-8 rounded-2xl border border-white/5 relative">
+                    <div class="text-brandSaffron text-4xl font-serif absolute top-4 left-6 opacity-20">“</div>
+                    <p class="text-gray-300 italic text-sm leading-relaxed mb-6 relative z-10">
+                        "Best personal attention and doubt solving experience. Amit Sir monitors every student individually."
+                    </p>
+                    <div class="text-xs font-semibold text-brandGold uppercase tracking-wide">— Class 7 Student</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. GALLERY PREVIEW -->
+    <section id="gallery" class="py-24 bg-darkCard">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+                <span class="text-brandSaffron uppercase text-xs font-bold tracking-widest block mb-2">Life at Sanwariya</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-white">Classroom Glimpses</h2>
+            </div>
+
+            <!-- Interactive Animated Gallery Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6" data-aos="zoom-in">
+                
+                <!-- Gallery Box 1 -->
+                <div class="group relative aspect-video sm:aspect-square bg-darkCharcoal rounded-2xl overflow-hidden border border-white/5 cursor-pointer">
+                    <div class="absolute inset-0 bg-gradient-to-t from-darkCharcoal via-transparent to-transparent z-10 opacity-80"></div>
+                    <div class="absolute inset-0 flex items-center justify-center bg-brandSaffron/10 opacity-0 group-hover:opacity-100 transition-all z-20">
+                        <i class="fa-solid fa-magnifying-glass-plus text-white text-2xl scale-75 group-hover:scale-100 transition-transform"></i>
+                    </div>
+                    <!-- Mock Placeholder Representation via High Gradient Vibe Layout -->
+                    <div class="w-full h-full bg-gradient-to-br from-orange-600/20 to-brandGold/10 flex flex-col justify-end p-6 relative z-10">
+                        <span class="text-sm font-semibold text-white">Interactive Classrooms</span>
+                        <span class="text-xs text-gray-400">Focused Study Environments</span>
+                    </div>
+                </div>
+
+                <!-- Gallery Box 2 -->
+                <div class="group relative aspect-video sm:aspect-square bg-darkCharcoal rounded-2xl overflow-hidden border border-white/5 cursor-pointer">
+                    <div class="absolute inset-0 bg-gradient-to-t from-darkCharcoal via-transparent to-transparent z-10 opacity-80"></div>
+                    <div class="absolute inset-0 flex items-center justify-center bg-brandSaffron/10 opacity-0 group-hover:opacity-100 transition-all z-20">
+                        <i class="fa-solid fa-magnifying-glass-plus text-white text-2xl scale-75 group-hover:scale-100 transition-transform"></i>
+                    </div>
+                    <div class="w-full h-full bg-gradient-to-br from-brandSaffron/20 to-yellow-600/10 flex flex-col justify-end p-6 relative z-10">
+                        <span class="text-sm font-semibold text-white">Weekly Exam Evaluation</span>
+                        <span class="text-xs text-gray-400">Discipline & Serious Ambience</span>
+                    </div>
+                </div>
+
+                <!-- Gallery Box 3 -->
+                <div class="group relative aspect-video sm:aspect-square bg-darkCharcoal rounded-2xl overflow-hidden border border-white/5 cursor-pointer">
+                    <div class="absolute inset-0 bg-gradient-to-t from-darkCharcoal via-transparent to-transparent z-10 opacity-80"></div>
+                    <div class="absolute inset-0 flex items-center justify-center bg-brandSaffron/10 opacity-0 group-hover:opacity-100 transition-all z-20">
+                        <i class="fa-solid fa-magnifying-glass-plus text-white text-2xl scale-75 group-hover:scale-100 transition-transform"></i>
+                    </div>
+                    <div class="w-full h-full bg-gradient-to-br from-amber-600/20 to-orange-500/10 flex flex-col justify-end p-6 relative z-10">
+                        <span class="text-sm font-semibold text-white">Prize Distribution</span>
+                        <span class="text-xs text-gray-400">Celebrating Toppers</span>
+                    </div>
+                </div>
+
+                <!-- Gallery Box 4 -->
+                <div class="group relative aspect-video sm:aspect-square bg-darkCharcoal rounded-2xl overflow-hidden border border-white/5 cursor-pointer">
+                    <div class="absolute inset-0 bg-gradient-to-t from-darkCharcoal via-transparent to-transparent z-10 opacity-80"></div>
+                    <div class="absolute inset-0 flex items-center justify-center bg-brandSaffron/10 opacity-0 group-hover:opacity-100 transition-all z-20">
+                        <i class="fa-solid fa-magnifying-glass-plus text-white text-2xl scale-75 group-hover:scale-100 transition-transform"></i>
+                    </div>
+                    <div class="w-full h-full bg-gradient-to-br from-brandGold/20 to-orange-600/10 flex flex-col justify-end p-6 relative z-10">
+                        <span class="text-sm font-semibold text-white">Board Teaching Work</span>
+                        <span class="text-xs text-gray-400">Crystal Clear Explanations</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. FOOTER / CONTACT LINK -->
+    <footer id="contact" class="bg-darkCharcoal border-t border-white/5 pt-20 pb-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-12 pb-16">
+                
+                <!-- Col 1: Brand Info -->
+                <div class="md:col-span-5 space-y-4">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 rounded-lg bg-brandSaffron flex items-center justify-center text-darkCharcoal font-bold text-lg">
+                            <i class="fa-solid fa-book-open-reader"></i>
+                        </div>
+                        <span class="text-xl font-bold text-white tracking-tight">સાંવરિયા Classes</span>
+                    </div>
+                    <p class="text-sm text-gray-400 max-w-sm leading-relaxed font-light">
+                        "Building Strong Concepts & Bright Futures"<br>
+                        Premium standard localized tuition tailored for maximum clarity and stellar performance scores.
+                    </p>
+                </div>
+
+                <!-- Col 2: Fast Navigation -->
+                <div class="md:col-span-3 space-y-4">
+                    <h4 class="text-white font-semibold text-sm tracking-wider uppercase">Quick Navigation</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#home" class="hover:text-brandSaffron transition-colors">Home Base</a></li>
+                        <li><a href="#why-choose" class="hover:text-brandSaffron transition-colors">Why Choose Us</a></li>
+                        <li><a href="#subjects" class="hover:text-brandSaffron transition-colors">Course Offerings</a></li>
+                        <li><a href="#results" class="hover:text-brandSaffron transition-colors">Results Showcase</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Direct Contact Information -->
+                <div class="md:col-span-4 space-y-4">
+                    <h4 class="text-white font-semibold text-sm tracking-wider uppercase">Get In Touch</h4>
+                    <ul class="space-y-3 text-sm text-gray-400">
+                        <li class="flex items-start space-x-3">
+                            <i class="fa-solid fa-user-tie text-brandSaffron mt-0.5"></i>
+                            <span><strong>Owner:</strong> Amitbhai D Suthar</span>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <i class="fa-solid fa-envelope text-brandSaffron mt-0.5"></i>
+                            <span>info@sanwariyaclasses.com</span>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <i class="fa-solid fa-location-dot text-brandSaffron mt-0.5"></i>
+                            <span>Ahmedabad, Gujarat, India</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bottom License Copyright -->
+            <div class="border-t border-white/5 pt-8 text-center text-xs text-gray-500 flex flex-col sm:flex-row items-center justify-between gap-4">
+                <p>&copy; 2026 Sanwariya Classes. All Rights Reserved.</p>
+                <p class="font-light"></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- AOS Animation Engine Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Init Animate On Scroll
+        AOS.init({
+            once: true,
+            duration: 800,
+        });
+
+        // Mobile Dropdown Navigation Toggle Logic
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile layout menu upon active page anchor clicks
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Dynamic Active Floating Navbar Shadow on Scroll Actions
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('.dynamic-nav');
+            if (window.scrollY > 40) {
+                nav.classList.add('shadow-xl', 'bg-darkCharcoal/95', 'py-1');
+            } else {
+                nav.classList.remove('shadow-xl', 'bg-darkCharcoal/95', 'py-1');
+            }
+        });
+    </script>
+</body>
+</html>
